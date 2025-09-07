@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$file = $argv[1];
+
+$parser = new Stancl\GPC\Parser;
+
+$parser->parseFile($file);
+
+printf("%s\n", json_encode($parser->records()));
+

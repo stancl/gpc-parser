@@ -63,7 +63,7 @@ class Parser
         return $generator->content();
     }
 
-    public function writeContent(string $path, string $encoding = null, string $lineSeparator = null): bool
+    public function writeContent(string $path, string|null $encoding = null, string|null $lineSeparator = null): bool
     {
         $generator = new Generator($encoding ?? $this->encoding, $lineSeparator ?? $this->lineSeparator);
 
